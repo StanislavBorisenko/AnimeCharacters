@@ -7,6 +7,7 @@ interface CharCardProps {
   jutsu: string[];
   birthdate: number;
   debut: string;
+  clan: string;
 }
 
 const Card = styled.div`
@@ -31,7 +32,7 @@ const DescriptionHolder = styled.div`
 `;
 
 const DescriptionLeftSide = styled.div`
-    width: 150px;
+  width: 150px;
 `;
 
 const DescriptionRightSide = styled.div``;
@@ -44,12 +45,12 @@ const CharacterName = styled.div`
 `;
 
 const DescriptionTitle = styled.div`
-  font-size: 16px;
+  font-size: 12px;
+  color: #8e95a9;
   margin-bottom: 7px;
 `;
 
 const DescriptionInfo = styled.div`
-  color: #8e95a9;
   font-size: 14px;
   margin-bottom: 15px;
 `;
@@ -60,6 +61,7 @@ const CharacterCard: React.FC<CharCardProps> = ({
   jutsu,
   birthdate,
   debut,
+  clan,
 }) => {
   return (
     <Card>
@@ -72,6 +74,8 @@ const CharacterCard: React.FC<CharCardProps> = ({
             <DescriptionInfo>{birthdate}</DescriptionInfo>
             <DescriptionTitle>Debut</DescriptionTitle>
             <DescriptionInfo>{debut}</DescriptionInfo>
+            <DescriptionTitle>Clan</DescriptionTitle>
+            <DescriptionInfo>{clan}</DescriptionInfo>
           </DescriptionLeftSide>
           <DescriptionRightSide>
             <DescriptionTitle>Abilities</DescriptionTitle>

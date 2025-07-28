@@ -12,6 +12,7 @@ interface Character {
   jutsu?: string[];
   birthdate: number;
   debut: string;
+  clan: string
 }
 
 interface SimplifiedCharacter {
@@ -21,6 +22,7 @@ interface SimplifiedCharacter {
   jutsu: string[];
   birthdate: number;
   debut: string;
+  clan: string;
 }
 
 interface ApiResponse {
@@ -45,7 +47,7 @@ const LoadingText = styled.p`
   color: #207dd4;
 `;
 
-const HomePage: React.FC = () => {
+const Home: React.FC = () => {
   const [characters, setCharacters] = useState<SimplifiedCharacter[]>([]);
 
   useEffect(() => {
@@ -60,8 +62,9 @@ const HomePage: React.FC = () => {
             name: character.name,
             image: character.images?.[0] ?? null,
             jutsu: character.jutsu || [],
-            birthdate: character.personal.birthdate,
-            debut: character.debut.anime
+            birthdate: character.personal.birthdate || "Неизвестно",
+            debut: character.debut.anime,
+            clan: Array.isArray(character?.personal.clan) ? character?.personal.clan[0] : (character?.personal.clan || 'Нет клана / Неизвестно')
           }));
         setCharacters(simplifiedCharacters);
       } catch (error) {
@@ -83,6 +86,7 @@ const HomePage: React.FC = () => {
             jutsu={character.jutsu}
             birthdate={character.birthdate}
             debut={character.debut}
+            clan={character.clan}
           />
         ))
       ) : (
@@ -95,4 +99,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Home;

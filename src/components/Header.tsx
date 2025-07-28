@@ -28,7 +28,7 @@ const Header: React.FC = () => {
     <HeaderBar>
       <NavBar>
         <StyledLink to="/">Главная</StyledLink>
-        <StyledLink to="/another-page">###</StyledLink>
+        <StyledLink to="/another-page">Другая страница</StyledLink>
       </NavBar>
     </HeaderBar>
   );
