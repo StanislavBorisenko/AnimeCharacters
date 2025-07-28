@@ -45,7 +45,7 @@ const LoadingText = styled.p`
   color: #207dd4;
 `;
 
-const Home: React.FC = () => {
+const HomePage: React.FC = () => {
   const [characters, setCharacters] = useState<SimplifiedCharacter[]>([]);
 
   useEffect(() => {
@@ -95,4 +95,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default HomePage;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const HeaderBar = styled.header`
   display: flex;
@@ -9,17 +10,25 @@ const HeaderBar = styled.header`
 
 const NavBar = styled.nav`
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
+`;
+
+const StyledLink = styled(Link)`
   font-size: 18px;
   font-weight: 500;
-`;
+  transition: color 500ms ease;
+
+  &:hover {
+    color: #2b7fd9;
+  }
+`
 
 const Header: React.FC = () => {
   return (
     <HeaderBar>
       <NavBar>
-        <a href="">Главная</a>
-        <a href="">###</a>
+        <StyledLink to="/">Главная</StyledLink>
+        <StyledLink to="/another-page">###</StyledLink>
       </NavBar>
     </HeaderBar>
   );

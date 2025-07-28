@@ -77,7 +77,7 @@ const CharacterCard: React.FC<CharCardProps> = ({
             <DescriptionTitle>Abilities</DescriptionTitle>
             <DescriptionInfo>
               {jutsu.slice(0, 5).map((ability) => (
-                <p>{ability}</p>
+                <p key={ability}>{ability}</p>
               ))}
             </DescriptionInfo>
           </DescriptionRightSide>
