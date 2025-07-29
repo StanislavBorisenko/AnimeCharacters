@@ -1,8 +1,11 @@
-import { type FC } from "react";
+import { useContext, type FC } from "react";
 import { NotFoundMessage } from "./styles";
+import { ThemeContext } from "../../ThemeContext";
 
 const NotFound: FC = () => {
-  return <NotFoundMessage>Совпадения не найдены</NotFoundMessage>;
+  const { theme } = useContext(ThemeContext);
+
+  return <NotFoundMessage theme={theme}>Совпадения не найдены</NotFoundMessage>;
 };
 
 export default NotFound;

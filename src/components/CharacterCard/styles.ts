@@ -31,25 +31,26 @@ export const DescriptionHolder = styled.div`
 `;
 
 export const DescriptionLeftSide = styled.div`
-  width: 150px;
+  min-width: 200px;
 `;
 
 export const DescriptionRightSide = styled.div``;
 
-export const CharacterName = styled.div`
+export const CharacterName = styled.div<{theme: string}>`
   color: #ebeef5;
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
 `;
 
-export const DescriptionTitle = styled.div`
+export const DescriptionTitle = styled.div<{theme: string}>`
   font-size: 12px;
-  color: #8e95a9;
+  color: ${props => props.theme === "dark" ? "#8e95a9" : "#063b74ff"};
   margin-bottom: 7px;
 `;
 
-export const DescriptionInfo = styled.div`
+export const DescriptionInfo = styled.div<{theme: string}>`
+  color: #d3d6dfff;
   font-size: 14px;
   margin-bottom: 15px;
 `;

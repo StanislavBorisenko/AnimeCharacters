@@ -1,5 +1,6 @@
-import React, { type FC } from "react";
+import React, { useContext, type FC } from "react";
 import { Search, SearchForm } from "./styles";
+import { ThemeContext } from "../../ThemeContext";
 
 interface IProps {
   searchInput: string;
@@ -7,6 +8,8 @@ interface IProps {
 }
 
 const FilterForm: FC<IProps> = ({ searchInput, setSearchInput }) => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <SearchForm
       onSubmit={(event) => {
@@ -18,6 +21,7 @@ const FilterForm: FC<IProps> = ({ searchInput, setSearchInput }) => {
         value={searchInput}
         onChange={(event) => setSearchInput(event.target.value)}
         placeholder="Enter character's name"
+        theme={theme}
       />
     </SearchForm>
   );

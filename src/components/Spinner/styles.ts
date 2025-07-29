@@ -8,6 +8,7 @@ export const Loading = styled.div`
   height: 30vh;
 `;
 
-export const LoadingText = styled.p`
-  color: #207dd4;
+export const LoadingText = styled.p<{theme: string}>`
+  color: ${props => props.theme === "dark" ? "#207dd4" : "#0c3d71"};
+  margin-top: 25px;
 `;
