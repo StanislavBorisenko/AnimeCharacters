@@ -8,7 +8,7 @@ const HomePage: FC = () => {
   return (
     <>
       <FilterForm searchInput={searchInput} setSearchInput={setSearchInput} />
-      <CharactersList />
+      <CharactersList searchInput={searchInput} />
     </>
   );
 };
