@@ -1,4 +1,10 @@
 import { createContext } from "react";
-import type { IThemeContext } from "./types/ThemeContext";
+interface IThemeContext {
+	theme: string;
+	toggleTheme: () => void;
+}
 
-export const ThemeContext = createContext<IThemeContext>({theme: "dark", toggleTheme: () => {}});
+export const ThemeContext = createContext<IThemeContext>({
+	theme: "dark",
+	toggleTheme: () => {},
+});

@@ -5,18 +5,19 @@ import { useContext } from "react";
 import { ThemeContext } from "../../ThemeContext";
 
 const Header: FC = () => {
-  const { theme } = useContext(ThemeContext);
+	const { theme } = useContext(ThemeContext);
+	console.log(123);
 
-  return (
-    <HeaderBar>
-      <NavBar>
-        <ThemeButton />
-        <StyledLink theme={theme} to="/">
-          Главная
-        </StyledLink>
-      </NavBar>
-    </HeaderBar>
-  );
+	return (
+		<HeaderBar>
+			<NavBar>
+				<ThemeButton />
+				<StyledLink theme={theme} to="/">
+					Главная
+				</StyledLink>
+			</NavBar>
+		</HeaderBar>
+	);
 };
 
 export default Header;

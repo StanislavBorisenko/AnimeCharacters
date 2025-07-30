@@ -5,13 +5,13 @@ import { Loading, LoadingText } from "./styles";
 import { ThemeContext } from "../../ThemeContext";
 
 const Spinner: FC = () => {
-  const theme = useContext(ThemeContext);
-  return (
-    <Loading>
-      <Spin indicator={<LoadingOutlined style={{ fontSize: 48 }} spin />} />
-      <LoadingText theme={theme}>Loading...</LoadingText>
-    </Loading>
-  );
+	const theme = useContext(ThemeContext);
+	return (
+		<Loading>
+			<Spin size="large" indicator={<LoadingOutlined spin />} />
+			<LoadingText theme={theme}>Loading...</LoadingText>
+		</Loading>
+	);
 };
 
 export default Spinner;
