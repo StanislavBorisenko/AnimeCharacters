@@ -6,6 +6,7 @@ export interface ICharacter {
 	birthdate: string;
 	debut: string;
 	clan: string;
+	
 	images?: string[] | string;
 }
 

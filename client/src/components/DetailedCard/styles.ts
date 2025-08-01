@@ -8,9 +8,9 @@ export const Detailed = styled.div`
 `;
 
 export const Image = styled.img`
-	min-width: 300px;
-	max-width: 300px;
-	min-height: 250px;
+	min-width: 400px;
+	max-width: 400px;
+	min-height: 300px;
 	max-height: 300px;
 	border-radius: 14px;
 `;

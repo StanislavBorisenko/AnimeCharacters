@@ -1,0 +1,64 @@
+{
+  "hash": "db7245ba",
+  "configHash": "b4244e77",
+  "lockfileHash": "4188d8f5",
+  "browserHash": "bdc23f00",
+  "optimized": {
+    "@ant-design/icons": {
+      "src": "../../node_modules/.pnpm/@ant-design+icons@5.6.1_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/@ant-design/icons/es/index.js",
+      "file": "@ant-design_icons.js",
+      "fileHash": "d8a27df8",
+      "needsInterop": false
+    },
+    "antd": {
+      "src": "../../node_modules/.pnpm/antd@5.26.6_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/antd/es/index.js",
+      "file": "antd.js",
+      "fileHash": "a29441ad",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/.pnpm/axios@1.11.0/node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "d5fea57f",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/.pnpm/react@19.1.0/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "cae988f1",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/.pnpm/react-dom@19.1.0_react@19.1.0/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "99562812",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/.pnpm/react-router-dom@7.7.1_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "2564c3ae",
+      "needsInterop": false
+    },
+    "styled-components": {
+      "src": "../../node_modules/.pnpm/styled-components@6.1.19_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/styled-components/dist/styled-components.browser.esm.js",
+      "file": "styled-components.js",
+      "fileHash": "338b076b",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-3A5AT6IQ": {
+      "file": "chunk-3A5AT6IQ.js"
+    },
+    "chunk-NCBFKE47": {
+      "file": "chunk-NCBFKE47.js"
+    },
+    "chunk-4MXNSX3A": {
+      "file": "chunk-4MXNSX3A.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
+}
