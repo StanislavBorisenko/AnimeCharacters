@@ -4,10 +4,12 @@ import { useParams } from "react-router-dom";
 import { getOneCharacter } from "../../services/api";
 import DetailedCard from "../../components/DetailedCard";
 import Spinner from "../../components/Spinner";
+import { usePrivy } from "@privy-io/react-auth";
+import NonAuthoticated from "../../components/NonAuthoticated";
 
 const CharacterDetail: FC = () => {
 	const characterID = useParams();
-
+	const { user } = usePrivy();
 	const [character, setCharacter] = useState<ICharacter | null>(null);
 	const [loading, setLoading] = useState(false);
 
@@ -28,6 +30,10 @@ const CharacterDetail: FC = () => {
 
 	if (loading) {
 		return <Spinner />;
+	}
+
+	if (!user) {
+		return <NonAuthoticated />;
 	}
 
 	if (character) {

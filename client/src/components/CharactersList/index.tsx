@@ -7,6 +7,8 @@ import NotFound from "../NotFound";
 import { Link } from "react-router-dom";
 import PaginationContainer from "../Pagination";
 import Character from "../Character";
+import { usePrivy } from "@privy-io/react-auth";
+import NonAuthoticated from "../NonAuthoticated";
 
 interface IProps {
 	searchInput: string;
@@ -19,6 +21,7 @@ const CharactersList: FC<IProps> = ({ searchInput }) => {
 	);
 	const [loading, setLoading] = useState(false);
 	const [currentPage, setCurrentPage] = useState(1);
+	const { user } = usePrivy();
 
 	const charactersPerPage = 5;
 	const lastCharacterIndex = currentPage * charactersPerPage;
@@ -56,6 +59,10 @@ const CharactersList: FC<IProps> = ({ searchInput }) => {
 			),
 		);
 	}, [searchInput, characters]);
+
+	if (!user) {
+		return <NonAuthoticated />;
+	}
 
 	if (loading) {
 		return <Spinner />;

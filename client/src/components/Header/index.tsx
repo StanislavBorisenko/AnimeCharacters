@@ -1,11 +1,20 @@
 import { type FC } from "react";
-import { HeaderBar, NavBar, StyledLink } from "./styles";
+import {
+	Buttons,
+	HeaderBar,
+	LoginButton,
+	LogoutButton,
+	NavBar,
+	StyledLink,
+} from "./styles";
 import ThemeButton from "../ThemeButton";
 import { useContext } from "react";
 import { ThemeContext } from "../../ThemeContext";
+import { usePrivy } from "@privy-io/react-auth";
 
 const Header: FC = () => {
 	const { theme } = useContext(ThemeContext);
+	const { ready, authenticated, user, login, logout } = usePrivy();
 
 	return (
 		<HeaderBar>
@@ -15,6 +24,16 @@ const Header: FC = () => {
 					Главная
 				</StyledLink>
 			</NavBar>
+			<Buttons>
+				{ready && authenticated ? (
+					<div>
+						{user?.email?.address.split("@")[0]}
+						<LogoutButton onClick={logout}>Log Out</LogoutButton>
+					</div>
+				) : (
+					<LoginButton onClick={login}>Log In</LoginButton>
+				)}
+			</Buttons>
 		</HeaderBar>
 	);
 };
